@@ -1,7 +1,6 @@
 import ArticleList from '@/components/ui/ArticleList';
 import { connectDB } from '@/lib/mongodb';
 import ArticleModel from '@/models/Article';
-import React from 'react';
 
 const ArticlePage = async () => {
   await connectDB();
