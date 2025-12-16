@@ -19,12 +19,12 @@ const Footer: React.FC = () => {
             <p>
               Copyright {new Date().getFullYear()} Merinda inc. Designed by{' '}
               <Link
-                href="https://alithemes.com"
+                href="https://github.com/shoriful-dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-indigo-600 hover:text-primary transition-colors"
               >
-                CodeTutorBD.com
+                shoriful-dev
               </Link>
             </p>
           </div>

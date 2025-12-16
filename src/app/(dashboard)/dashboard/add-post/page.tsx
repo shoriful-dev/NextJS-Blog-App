@@ -2,7 +2,6 @@
 import PostForm, { PostFormType } from '@/components/form/PostForm';
 import { uploadImageToCloudinary } from '@/lib/uploadImageToCloudinary';
 import { useRouter } from 'next/navigation';
-import React from 'react';
 
 const AddPostPage = () => {
   const router = useRouter();
