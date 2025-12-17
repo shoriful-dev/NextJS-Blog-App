@@ -1,10 +1,10 @@
 import PostMeta from '@/components/ui/PostMeta';
-import { Article } from '@/types/article';
+import { IArticle } from '@/models/Article';
 import Image from 'next/image';
 import Link from 'next/link';
 
 interface MostRecentGridArticlesProps {
-  article: Article;
+  article: IArticle;
 }
 
 const MostRecentGridArticles = ({ article }: MostRecentGridArticlesProps) => {

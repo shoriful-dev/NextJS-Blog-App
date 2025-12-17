@@ -47,7 +47,7 @@ const MostRecentSection = ({
             <SectionTitle title="Most Recent" />
             <div>
               {mostRecentArticles.map(article => (
-                <ArticleCardMostRecent key={article._id} article={article} />
+                <ArticleCardMostRecent key={article._id.toString()} article={article} />
               ))}
             </div>
 
@@ -57,7 +57,7 @@ const MostRecentSection = ({
             {/* 2x2 all most recent grid articles */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
               {currentGridArticles.map(article => (
-                <MostRecentGridArticles key={article._id} article={article} />
+                <MostRecentGridArticles key={article._id.toString()} article={article} />
               ))}
             </div>
 

@@ -1,11 +1,11 @@
 import ArticleExcerpt from '@/components/ui/ArticleExcerpt';
 import PostMeta from '@/components/ui/PostMeta';
-import { Article } from '@/types/article';
+import { IArticle } from '@/models/Article';
 import Image from 'next/image';
 import Link from 'next/link';
 
 interface ArticleCardMostRecentProps {
-  article: Article;
+  article: IArticle;
 }
 
 const ArticleCardMostRecent = ({ article }: ArticleCardMostRecentProps) => {
