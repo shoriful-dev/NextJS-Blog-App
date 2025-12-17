@@ -1,9 +1,9 @@
 import PostMeta from '@/components/ui/PostMeta';
-import { Article } from '@/types/article';
+import { IArticle } from '@/models/Article';
 import Link from 'next/link';
 
 interface SwiperCardProps {
-  article: Article;
+  article: IArticle;
 }
 
 const SwiperCard = ({ article }: SwiperCardProps) => {

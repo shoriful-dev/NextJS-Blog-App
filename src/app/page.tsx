@@ -16,7 +16,6 @@ export default async function Home() {
     allMostRecentGridArticles,
     popularArticles,
   } = articles;
-  console.log(articles);
   return <div className="blog-container">
     {
       editorPicksPrimary && editorPicksSecondary.length > 0 && trendingArticles.length > 0 && (

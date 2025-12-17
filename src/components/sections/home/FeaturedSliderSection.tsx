@@ -7,10 +7,10 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import SwiperCard from './SwiperCard';
-import { Article } from '@/types/article';
+import { IArticle } from '@/models/Article';
 
 interface FeaturedSliderSectionProps {
-  articles: Article[];
+  articles: IArticle[];
 }
 
 const FeaturedSliderSection = ({ articles }: FeaturedSliderSectionProps) => {
