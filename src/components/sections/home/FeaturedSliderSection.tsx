@@ -1,6 +1,5 @@
 'use client';
 
-import { IArticle } from '@/models/Article';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 
@@ -8,9 +7,10 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import SwiperCard from './SwiperCard';
+import { Article } from '@/types/article';
 
 interface FeaturedSliderSectionProps {
-  articles: IArticle[];
+  articles: Article[];
 }
 
 const FeaturedSliderSection = ({ articles }: FeaturedSliderSectionProps) => {
@@ -38,7 +38,7 @@ const FeaturedSliderSection = ({ articles }: FeaturedSliderSectionProps) => {
           className="rounded-xl "
         >
           {articles.map(article => (
-            <SwiperSlide key={article._id}>
+            <SwiperSlide key={article._id.toString()}>
               <SwiperCard article={article} />
             </SwiperSlide>
           ))}

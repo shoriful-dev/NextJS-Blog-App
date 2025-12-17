@@ -43,7 +43,7 @@ const SearchPage = async ({
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {articles.map(article => (
               <div
-                key={article._id}
+                key={article._id.toString()}
                 className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300"
               >
                 <Link href={`/articles/${article._id}`} className="block">
