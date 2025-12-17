@@ -24,6 +24,6 @@ export interface Article {
   image: string;
   excerpt?: string;
   caption?: string;
-  meta: ArticleMeta;
   tags?: string;
+  meta: ArticleMeta;
 }

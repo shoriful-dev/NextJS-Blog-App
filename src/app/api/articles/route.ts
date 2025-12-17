@@ -1,7 +1,6 @@
 import { connectDB } from '@/lib/mongodb';
-import ArticleModel, { IArticle } from '@/models/Article';
+import ArticleModel from '@/models/Article';
 import { NextRequest, NextResponse } from 'next/server';
-import { FilterQuery } from 'mongoose';
 
 export async function GET(request: NextRequest) {
   try {
@@ -10,7 +9,8 @@ export async function GET(request: NextRequest) {
     const category = searchParams.get('category');
     const query = searchParams.get('q');
 
-    const filter: FilterQuery<IArticle> = {};
+    const filter: Record<string, any> = {};
+
     if (category) {
       filter['meta.category'] = { $regex: `^${category}$`, $options: 'i' };
     }

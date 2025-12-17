@@ -1,9 +1,10 @@
 import { Article, ArticleMeta } from "@/types/article";
 import mongoose, { Document, Model, Schema } from "mongoose";
 
-export interface IArticle extends Omit<Article, '_id'>, Document{
+export interface IArticle extends Omit<Article, '_id'>, Document {
   meta: ArticleMeta;
 }
+
 
 const ArticleSchema: Schema<IArticle> = new Schema<IArticle>({
   title: { type: String, required: true },

@@ -49,7 +49,7 @@ const ManagePostsPage = async ({
             </thead>
             <tbody>
               {posts.map(post => (
-                <tr key={post._id} className="border-b">
+                <tr key={post._id.toString()} className="border-b">
                   <td className="p-3">
                     <Link
                       href={`/articles/${post._id}`}
@@ -67,7 +67,7 @@ const ManagePostsPage = async ({
                     >
                       Edit
                     </Link>
-                    <DeleteButton id={post._id} />
+                    <DeleteButton id={post._id.toString()} />
                   </td>
                 </tr>
               ))}

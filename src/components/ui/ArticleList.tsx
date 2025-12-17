@@ -1,6 +1,6 @@
 'use client';
 
-import { IArticle } from '@/models/Article';
+import { Article } from '@/types/article';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -14,8 +14,8 @@ const Loader = () => {
   );
 };
 
-const ArticleList = ({ initialArticles }: { initialArticles: IArticle[] }) => {
-  const [articles, setArticles] = useState(initialArticles);
+const ArticleList = ({ initialArticles }: { initialArticles: Article[] }) => {
+  const [articles, setArticles] = useState<Article[]>(initialArticles);
   const [page, setPage] = useState(2);
   const [hasMore, setHasMore] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
@@ -51,7 +51,7 @@ const ArticleList = ({ initialArticles }: { initialArticles: IArticle[] }) => {
   return (
     <>
       <div className="grid md:grid-cols-4 gap-10">
-        {articles.map((article: IArticle, index: number) => (
+        {articles.map((article: Article, index: number) => (
           <Link
             key={index}
             href={`/articles/${article._id}`}

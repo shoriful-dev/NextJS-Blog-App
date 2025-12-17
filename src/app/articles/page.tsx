@@ -1,6 +1,7 @@
 import ArticleList from '@/components/ui/ArticleList';
 import { connectDB } from '@/lib/mongodb';
 import ArticleModel from '@/models/Article';
+import { Article } from '@/types/article';
 
 const ArticlePage = async () => {
   await connectDB();
@@ -9,7 +10,7 @@ const ArticlePage = async () => {
     .limit(10)
     .lean();
 
-  const serializedArticles = initialArticles.map(article => ({
+  const serializedArticles: Article[] = initialArticles.map(article => ({
     ...article,
     _id: article._id.toString(),
   }));
